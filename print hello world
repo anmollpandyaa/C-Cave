@@ -1,0 +1,9 @@
+#include<stdio.h>
+
+int main()
+{
+    //printf is used to print anything in C, like this
+    printf("Hello World");
+    
+    return 0;
+}
