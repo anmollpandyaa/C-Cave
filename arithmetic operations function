@@ -31,10 +31,12 @@ int divide(int a, int b)
 int main()
 {
     int operation;
+
     printf("\nChoose Operation: \n1. Addition\n2. Subtraction \n3. Multiplication \n4. Division\n\n->");
     scanf("%d", &operation);
 
     int num1, num2;
+
     printf("\nEnter Values to perform your operation: \n");
     scanf("%d%d", &num1, &num2);
 
@@ -74,4 +76,5 @@ int main()
     }
 
     return 0;
+
 }
