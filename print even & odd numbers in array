@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int main()
+{
+    int arr[] = {2, 8, 9, 16, 4};
+
+    for (int i = 0; i < 5; i++)
+    {
+        if (arr[i] % 2 == 0)
+        {
+            printf("%d is the even\n", arr[i]);
+        }
+        else
+        {
+            printf("%d is odd\n", arr[i]);
+        }
+    }
+    return 0;
+}
