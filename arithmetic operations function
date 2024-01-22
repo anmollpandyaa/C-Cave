@@ -1,0 +1,77 @@
+#include <stdio.h>
+
+int add(int a, int b)
+{
+    return (a + b);
+}
+
+int subtract(int a, int b)
+{
+    return (a - b);
+}
+
+int multiply(int a, int b)
+{
+    return (a * b);
+}
+
+int divide(int a, int b)
+{
+    if (b != 0)
+    {
+        return (a / b);
+    }
+    else
+    {
+        printf("Error: Division by zero is not allowed.\n");
+        return 0;
+    }
+}
+
+int main()
+{
+    int operation;
+    printf("\nChoose Operation: \n1. Addition\n2. Subtraction \n3. Multiplication \n4. Division\n\n->");
+    scanf("%d", &operation);
+
+    int num1, num2;
+    printf("\nEnter Values to perform your operation: \n");
+    scanf("%d%d", &num1, &num2);
+
+    switch (operation)
+    {
+    case 1:
+    {
+        int sum = add(num1, num2);
+        printf("%d is the sum of given values\n", sum);
+        break;
+    }
+
+    case 2:
+    {
+        int difference = subtract(num1, num2);
+        printf("%d is the difference of given values\n", difference);
+        break;
+    }
+
+    case 3:
+    {
+        int product = multiply(num1, num2);
+        printf("%d is the product of given values\n", product);
+        break;
+    }
+
+    case 4:
+    {
+        int quotient = divide(num1, num2);
+        printf("%d is the quotient of given values", quotient);
+        break;
+    }
+
+    default:
+        printf("Invalid Input!");
+        break;
+    }
+
+    return 0;
+}
