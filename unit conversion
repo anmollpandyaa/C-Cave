@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main()
+{
+    float num;
+    printf("Enter value in kilometer: ");
+    scanf("%f", &num);
+
+    float m = num * 1000;
+    float cm = num * 10000;
+
+    printf("Given value is equals to %.2fm & %.2fcm.", m, cm);
+
+    return 0;
+}
