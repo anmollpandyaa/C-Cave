@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+// Function to create a square matrix
+void createMatrix(int size, int matrix[size][size]) {
+    printf("Enter elements for the matrix:\n");
+
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            printf("Enter element at row %d, column %d: ", i + 1, j + 1);
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+}
+
+// Function to perform matrix multiplication
+void multiplyMatrix(int size, int matrix[size][size]) {
+    printf("Performing matrix multiplication:\n");
+
+    // Assuming the matrix is multiplied by itself
+    int result[size][size];
+
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            result[i][j] = 0;
+            for (int k = 0; k < size; ++k) {
+                result[i][j] += matrix[i][k] * matrix[k][j];
+            }
+        }
+    }
+
+    // Display the multiplied matrix
+    printf("Resultant Matrix:\n");
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            printf("%d\t", result[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int size;
+
+    // Input the size of the square matrix
+    printf("Enter the size of the square matrix: ");
+    scanf("%d", &size);
+
+    // Create the square matrix
+    int matrix[size][size];
+    createMatrix(size, matrix);
+
+    // Perform matrix multiplication
+    multiplyMatrix(size, matrix);
+
+    return 0;
+}
