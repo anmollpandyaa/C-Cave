@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+struct student
+{
+    char name[40];
+    int age;
+    int regnum;
+};
+
+int main()
+{
+    struct student s1 = {"Anmol Pandya", 20, 24};
+    struct student s2 = {"Rajeev Kapoor", 21, 46};
+    struct student s3 = {"Chaya Jargurjar", 19, 29};
+
+    printf("Details of students:\n\n");
+
+    printf("Name: %s\nAge: %d\nRegistration No.: %d\n____________________\n", s1.name, s1.age, s1.regnum);
+    printf("Name: %s\nAge: %d\nRegistration No.: %d\n____________________\n", s2.name, s2.age, s2.regnum);
+    printf("Name: %s\nAge: %d\nRegistration No.: %d\n____________________\n", s3.name, s3.age, s3.regnum);
+
+    return 0;
+}
